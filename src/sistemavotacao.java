@@ -21,7 +21,7 @@ static int[] quantidadeVotosTurma = new int[TOTAL_TURMAS];
 static int quantidadeCandidatos = 0;
 
 
-import java.util.Scanner;
+
 
 public class SistemaVotacao {
     public static void main(String[] args) {
@@ -63,6 +63,27 @@ public class SistemaVotacao {
         scanner.close();
     }
 }
+
+  static int lerInteiro(String mensagem, Scanner scanner) {
+    while (true) {
+        System.out.print(mensagem);
+
+        if (scanner.hasNextInt()) {
+            int valor = scanner.nextInt();
+            scanner.nextLine();
+            return valor;
+        }
+
+        System.out.println("Entrada inválida. Digite um número.");
+        scanner.nextLine();
+    }
+}
+
+
+
+
+
+
 
 
 
