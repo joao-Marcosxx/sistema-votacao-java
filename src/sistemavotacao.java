@@ -273,6 +273,22 @@ static void exibirMatrizVotos() {
     }
 }
 
+static void calcularTotalVotos() {
+    int totalVotos = 0;
+
+    for (int i = 0; i < quantidadeCandidatos; i++) {
+        totalVotos += votosCandidatos[i];
+    }
+
+    if (totalVotos == 0) {
+        System.out.println("Nenhum voto foi registrado.");
+        return;
+    }
+
+    System.out.println("Total de votos apurados: " + totalVotos);
+}
+
+
 
 
 
