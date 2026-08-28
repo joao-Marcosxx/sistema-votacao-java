@@ -288,6 +288,35 @@ static void calcularTotalVotos() {
     System.out.println("Total de votos apurados: " + totalVotos);
 }
 
+static void exibirApuracao() {
+
+    // DECLARAÇÕES NECESSÁRIAS: Criação das variáveis para o bloco funcionar solto
+    int quantidadeCandidatos = 3;
+    int totalVotos = 100;
+    int[] votosCandidatos = {40, 35, 25};
+    String[] nomesCandidatos = {"Candidato A", "Candidato B", "Candidato C"};
+
+    // O SEU BLOCO EXATAMENTE COMO VOCÊ ENVIOU, FORMATADO E ALINHADO:
+    for (int i = 0; i < quantidadeCandidatos; i++) {
+        // Calcula o percentual de votos do candidato atual
+        double percentual = (votosCandidatos[i] * 100.0) / totalVotos;
+
+        // CORREÇÃO: Alinhamento exato do comando printf para o padrão IntelliJ
+        System.out.printf(
+                "%s -> %d voto(s) (%.2f%%)%n",
+                nomesCandidatos[i],
+                votosCandidatos[i],
+                percentual
+        );
+    }
+
+}
+
+
+
+
+
+
 
 
 
