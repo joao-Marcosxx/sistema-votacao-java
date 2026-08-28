@@ -179,6 +179,26 @@ static void mostrarCandidatos() {
     }
 }
 
+:
+static void obterTurma() {
+
+    int turma = 0;
+
+    do {
+        System.out.print("Informe a turma de 1 a 3: ");
+        turma = sistemavotacao.scanner.nextInt();
+        sistemavotacao.scanner.nextLine();
+
+        if (turma < 1 || turma > 3) {
+            System.out.println("Turma inválida.");
+        }
+    } while (turma < 1 || turma > 3);
+
+    int indiceTurma = turma - 1;
+}
+
+
+
 
 
 
