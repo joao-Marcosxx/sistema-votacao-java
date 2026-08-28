@@ -78,6 +78,36 @@ public class SistemaVotacao {
         scanner.nextLine();
     }
 }
+static void cadastrarCandidatos(int maxCandidatos) {
+    if (quantidadeCandidatos > 0) {
+        System.out.println("Os candidatos já foram cadastrados.");
+        return;
+    }
+
+    int quantidade;
+
+    do {
+
+        quantidade = lerInteiro("Quantidade de candidatos entre 1 e 5: ");
+
+
+        if (quantidade < 1 || quantidade > maxCandidatos) {
+            System.out.println("Quantidade inválida.");
+        }
+    } while (quantidade < 1 || quantidade > maxCandidatos);
+
+
+    quantidadeCandidatos = quantidade;
+
+}
+
+
+
+
+
+
+
+
 
 
 
