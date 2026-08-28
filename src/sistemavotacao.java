@@ -312,6 +312,21 @@ static void exibirApuracao() {
 
 }
 
+static void encontrarMaiorVotacao() {
+
+
+    int maiorQuantidadeVotos = votosCandidatos[0];
+
+    for (int i = 1; i < quantidadeCandidatos; i++) {
+        if (votosCandidatos[i] > maiorQuantidadeVotos) {
+            maiorQuantidadeVotos = votosCandidatos[i];
+        }
+    }
+
+}
+
+
+
 
 
 
