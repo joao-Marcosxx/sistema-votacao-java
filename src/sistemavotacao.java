@@ -133,6 +133,35 @@ static void cadastrarCandidatos(int maxCandidatos) {
 }
 
 
+static void cadastrarCandidatos() {
+
+
+    int quantidade = 0;
+    for (int i = 0; i < quantidade; i++) {
+        int numero = 0;
+        String nome;
+
+        do {
+            System.out.print("Nome do candidato: ");
+            nome = sistemavotacao.scanner.nextLine().trim();
+
+            if (nome.isEmpty()) {
+                System.out.println("O nome não pode ficar vazio.");
+            }
+        } while (nome.isEmpty());
+
+
+        numerosCandidatos[i] = numero;
+        nomesCandidatos[i] = nome;
+        votosCandidatos[i] = 0;
+        quantidadeCandidatos++;
+    }
+}
+
+
+
+
+
 
 
 
