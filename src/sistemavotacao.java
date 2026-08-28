@@ -325,6 +325,66 @@ static void encontrarMaiorVotacao() {
 
 }
 
+static void anunciarVencedores() {
+    int quantidadeVencedores = 0;
+
+    int maiorQuantidadeVotos = 0;
+    for (int i = 0; i < quantidadeCandidatos; i++) {
+        if (votosCandidatos[i] == maiorQuantidadeVotos) {
+            quantidadeVencedores++;
+        }
+    }
+
+    if (quantidadeVencedores == 1) {
+        System.out.print("Vencedor: ");
+    } else {
+        System.out.print("Empate entre: ");
+    }
+
+    boolean primeiroNome = true;
+
+    for (int i = 0; i < quantidadeCandidatos; i++) {
+        if (votosCandidatos[i] == maiorQuantidadeVotos) {
+            if (!primeiroNome) {
+                System.out.print(", ");
+            }
+
+            System.out.print(nomesCandidatos[i]);
+            primeiroNome = false;
+        }
+    }
+
+    System.out.println();
+}
+public static void main(String[] args) {
+    
+    int opcao = 1;
+
+   
+    switch (opcao) {
+        case 1:
+            cadastrarCandidatos();
+            break;
+        case 2:
+            iniciarVotacao();
+            break;
+        case 3:
+            exibirResultado();
+            break;
+        case 4:
+            exibirMatrizVotos();
+            break;
+        case 5:
+            System.out.println("Sistema encerrado.");
+            break;
+        default:
+            System.out.println("Opção inválida.");
+    }
+}
+
+private static void exibirResultado() {
+}
+
 
 
 
